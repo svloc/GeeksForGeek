@@ -17,6 +17,23 @@ int SecondLargets(int arr[],int n){
 
   }
 }
+
+int Se_1(int arr[],int n){
+    unordered_map<int,int>mp;
+    vector<int>v;
+
+    for(int i=0;i<n;i++){
+        mp[arr[i]]++;
+        if(mp[arr[i]]==1){
+            v.push_back(arr[i]);
+        }
+    }
+    sort(v.begin(),v.end());
+    if(v.size()==1){
+        return {-1};
+    }
+    return v[n-2];
+}
 int main(){
     int n;
     cout<<"Enter N: ";
@@ -27,5 +44,7 @@ int main(){
         cin>>arr[i];
     }
     cout<<"Result: "<<SecondLargets(arr,n);
+    cout<<"Result: "<<Se_1(arr,n);
+    
     return 0;
 }
