@@ -2,13 +2,12 @@
 using namespace std;
 
 long long maxSumArray(int arr[],int n){
-int currSum=0,maxSum=0;
+int currSum=0,maxSum=INT32_MIN;
 
 for(int i=0;i<n;i++){
 currSum+=arr[i];
- if(currSum>maxSum){
-     maxSum=currSum;
- }
+    maxSum=max(currSum,maxSum);
+ 
  if(currSum<0){
      currSum=0;
  }
