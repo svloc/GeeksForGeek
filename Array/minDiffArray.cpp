@@ -24,5 +24,5 @@ int main(){
  cout<<"Enter K: ";
  cin>>k;
  cout<<minDiff(arr,n,k);
-
+ return 0;
 }
