@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int formatArray(int arr[], int n){
+void formatArray(int arr[], int n){
   for(int i=0;i<n;i++){
     if(i%2==0 && arr[i]<arr[i+1])
     continue;
@@ -9,7 +9,7 @@ int formatArray(int arr[], int n){
     else
     swap(arr[i],arr[i+1]);
   }
-  return arr;
+
 }
 
 int main(){
@@ -22,7 +22,9 @@ int main(){
     cin>>arr[i];
  }  
  
- cout<<"Result: "<<formatArray(arr,n);
-
+ formatArray(arr,n);
+for(int i=0;i<n;i++){
+    cout<<arr[i]<<" ";
+ }
  return 0;
 }
