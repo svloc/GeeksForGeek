@@ -41,7 +41,7 @@ int main(){
     cout<<"Enter K: ";
     cin>>k;
 
-    leftR_1(arr,n,k);
+    leftRotation(arr,n,k);
 
     for(int i=0;i<n;i++)
     cout<<arr[i]<<" ";
