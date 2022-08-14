@@ -10,6 +10,22 @@ int peakElement(int arr[],int n){
   }
   return index;
 }
+
+int PeakEle(int arr[],int n){
+  int s=0,e=n-1;
+  int mid;
+  while(s<e){
+    mid=s+(e-s)/2;
+    if(arr[mid]<arr[mid+1]){
+        s=mid+1;
+    }
+    else{
+        e=mid;
+    }
+  }
+  return s;
+}
+
 int main(){
     int n;
     cout<<"Enter N: ";

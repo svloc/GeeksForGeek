@@ -18,6 +18,11 @@ void Sort012(int arr[],int n){
 
     }
 }
+
+//Time complexity..
+
+//Time and space COmplexity.
+//
 int main(){
     int n;
     cout<<"Enter N: ";
