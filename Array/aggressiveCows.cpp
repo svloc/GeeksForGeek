@@ -35,6 +35,7 @@ int aggressiveCows(int arr[],int n,int cow){
     }
     return ans;
 }
+
 int main(){
     int n;
     cout<<"Enter N: ";
