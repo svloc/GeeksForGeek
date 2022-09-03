@@ -1,8 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 int OperationsBinaryString(string str){
-    int res;
-    int n=str.length();
+    char res;
+   int n=str.length();
+   
    for(int i=1;i<n-1;i+=2){
     if(str[i]=='A'){
        res=(str[i-1] & str[i+1]);

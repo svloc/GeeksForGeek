@@ -3,7 +3,7 @@ using namespace std;
 int isPerfectNumber(int n){
     if(n==1)
     return 0;
-    int sum=1;
+    int sum=1;   
     for(int i=2;i<sqrt(n);i++){
         if(n%i==0)
         {
