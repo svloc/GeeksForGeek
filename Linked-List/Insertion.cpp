@@ -1,10 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
-class node{
+class Node{
   public:
     int data;
-    node *next;
+    Node* next;
 };
+
 class SL{
     public:
     Node *head,*last;
@@ -16,16 +17,21 @@ class SL{
 };
 
 void SL::insert(){
+    
+   int ch1;
+    do{
     int val;
     cout<<"Enter Data: ";
     cin>>val;
     int ch;
-    cout<<"Insert at: 1]Start/n2]End";
+    cout<<"Insert at: \n1]Start\n2]End: "<<endl;
     cin>>ch;
-    do{
+    Node *temp=new Node;
+
+    
         switch(ch){
             case 1:
-            temp=new node;
+          
             temp->data=val;
             temp->next=NULL;
             if(head==NULL){
@@ -36,11 +42,11 @@ void SL::insert(){
                 temp->next=head;
                 head=temp;
             }
-            
+            cout<<"Data added---->"<<endl;
             break;
     
             case 2:
-            temp=new node;
+           // Node *temp=new Node;
             temp->data=val;
             temp->next=NULL;
             if(head==NULL)
@@ -53,15 +59,30 @@ void SL::insert(){
                     head=head->next;
                 }
                 head->next=temp;
-                temp-next=NULL;
+                temp->next=NULL;
 
             }
+             cout<<"Data added---->"<<endl;
             break;
         }
 
-    }while(ch==1||ch==2);
+    
+    cout<<"Do you want to continue: 1 or 0: ";
+    cin>>ch1;
+    }
+    while(ch1==1);
 
 }
+
+void SL::display(){
+    while(head->next!=NULL){
+        cout<<head->data<<" ";
+        head=head->next;
+    }
+}
 int main(){
+    SL obj;
+    obj.insert();
+    obj.display();
  return 0;
 }

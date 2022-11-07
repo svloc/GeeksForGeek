@@ -9,6 +9,7 @@ int gcd_of_num(int a,int b){
     }
     return b;
 }
+
 int GCDofArray(int arr[],int n){
   int x=0;
   for(int i=0;i<n;i++){
